@@ -7,7 +7,7 @@ int main() {
 		int sticks = 23;
 		int playerSelection;
 		int computerSelection;
-		cout << "Lets play a game of 23!" << endl;
+		cout << "Lets play a game of 23! We have 23 sticks, and you can pick up a maximum of 4 sticks and no passes! Whoever picks up the last stick loses" << endl;
 		do{
 			cout<< "Enter the number of sticks you wish to pick: " << endl;
 			cin >> playerSelection;
@@ -20,6 +20,7 @@ int main() {
 				break;
 			}
 			sticks -= playerSelection;
+			cout << "You picked up " << playerSelection << " sticks. There are " << sticks << " remaining." << endl;
 			if (sticks > 4) {
 				computerSelection = 4 - playerSelection;
 			}
@@ -34,7 +35,7 @@ int main() {
 				break;
 			}
 			sticks -= computerSelection;
-			cout << "I pick up " << computerSelection << " sticks. There are " << sticks << " remaining.";
+			cout << "I pick up " << computerSelection << " sticks. There are " << sticks << " remaining."<<endl;
 		}while (sticks > 0);
 		cout << "Would you like to play again? 1 for yes, 2 for no." << endl;
 		cin >> replaySelection;
